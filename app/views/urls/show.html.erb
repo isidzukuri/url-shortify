@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">URL statistic</div>
+
+    <div class="panel-body">
+      
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon3">Original url</span>
+        <input type="text" class="form-control" value="<%= @item.original%>" readonly>
+      </div>
+
+      <br/>
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon3">Redirects count</span>
+        <input type="text" class="form-control" value="<%= @item.redirects%>" readonly>
+      </div>
+      <br/>
+
+      <div class="input-group has-success ">
+        <span class="input-group-addon" id="basic-addon3">Short url</span>
+        <input type="text" class="form-control" value="<%= @short_url%>" readonly>
+      </div>
+    </div>
+    
+</div>
+
+<%= link_to 'Short another URL', root_path, class: 'btn btn-primary' %>
