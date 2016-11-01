@@ -22,7 +22,7 @@ RSpec.describe Url, type: :model do
     expect(item_2).not_to be_valid
   end
 
-  it 'is valid if contain letters and digits only' do
+  it 'is valid if key contains letters and digits only' do
     url = Url.create(original: Faker::Internet.url)
     url.key = '!@#[^'
     expect(url).not_to be_valid

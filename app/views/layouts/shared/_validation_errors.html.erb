@@ -1,0 +1,9 @@
+<% if item.errors.any? %>
+  <ul>
+    <% for message_error in @item.errors.full_messages %>
+      <li class="alert alert-danger">
+        <%= message_error %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

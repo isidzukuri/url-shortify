@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Url shortner</div>
+  <div class="panel-body">
+    <%= form_for @item do |f| %>
+      <div class="input-group">
+        <%= f.text_field :original, class: 'form-control', placeholder: "Paste your original URL" %>
+        <span class="input-group-btn">
+          <%= f.submit 'short now', class: 'btn btn-primary' %>
+        </span>
+      </div>
+    <% end %>
+  </div>
+  <%= render "layouts/shared/validation_errors", item: @item %>
+</div>
