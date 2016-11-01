@@ -1,24 +1,5 @@
-# README
+Simple url shortner built with ruby on rails. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Generates user friendly urls. Excludes the ambiguous characters (i.e. 1,l,I,0,O).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The service handle the case when it's not possible to generate a new unique id of length N, by increasing the length to N+1.
