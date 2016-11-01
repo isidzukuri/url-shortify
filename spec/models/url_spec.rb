@@ -15,12 +15,6 @@ RSpec.describe Url, type: :model do
     expect(item_with_key).to be_valid
   end
 
-  it 'is not valid if key is to long' do
-    url = Url.create(original: Faker::Internet.url)
-    url.key = 'qwerty7'
-    expect(url).not_to be_valid
-  end
-
   it 'is not valid if key not uniq' do
     item_1 = Url.create(original: Faker::Internet.url)
     item_2 = Url.create(original: Faker::Internet.url)
